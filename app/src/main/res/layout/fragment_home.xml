@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".HomeActivity">
+
+
+    <TextView
+        android:id="@+id/hellomessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Hey User,"
+        android:textColor="#000"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/searchmsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hellomessage"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Find a topic you wants to learn"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
+    <EditText
+        android:id="@+id/etsearch"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:maxLines="1"
+        android:layout_below="@id/searchmsg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+android:paddingLeft="20dp"
+        android:background="@drawable/edit_text"
+
+
+
+        android:hint="Search Here..." />
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:id="@+id/btnsearch"
+        android:layout_below="@id/searchmsg"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/ic_baseline_search_"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/etsearch"></Button>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/etsearch"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text"
+        >
+        <TextView
+            android:id="@+id/coorsecontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textStyle="bold"
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Course Content"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerHome"
+            android:layout_height="match_parent"
+            android:layout_below="@id/coorsecontent"
+            android:layout_margin="10dp"
+            ></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+</RelativeLayout>
